@@ -1,0 +1,9 @@
+.input-wrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.input-wrapper-box {
+    width: 100%;
+}
