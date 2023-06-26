@@ -7,7 +7,22 @@ class TodoItem extends React.Component {
         super(props);
     };
 
+    componentDidUpdate() {
+        console.log('hello world');
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        if(nextProps.todoTitle !== this.props.todoTitle || 
+           nextProps.uniqueItem !== this.props.uniqueItem
+        ) {
+            return true;
+        } else {
+            return false;
+        };
+    }
+
     render() {
+        console.log('what');
         return (
             <div className={styles['todo-item']}>
                 <p>{this.props.todoTitle}</p>
